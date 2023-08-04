@@ -12,17 +12,16 @@
 
 #include <iostream>
 
-static void megaphone(char *str)
+static void megaphone(std::string str)
 {
-	std::string	s(str);
 	int i = 0;
 
 	while (str[i])
 	{
-		s[i] = std::toupper(str[i]);
+		str[i] = toupper(str[i]);
 		i++;
 	}
-	std::cout << s;
+	std::cout << str;
 }
 
 int main(int argc, char **argv)
