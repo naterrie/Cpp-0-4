@@ -9,11 +9,19 @@ DIR_OBJS := .objs
 
 OBJS =	$(addprefix $(DIR_OBJS)/, $(SRCS:.cpp=.o))
 
-NAME =	megaphone
+NAME =	phonebook
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
+INC_DIR =	includes
+INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
+HEADERS =	PhoneBook.hpp \
+			Contact.hpp
 
-SRCS =	megaphone.cpp
+FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR)
+
+SRCS =	main.cpp \
+		PhoneBook.cpp \
+		Contact.cpp \
+		actions.cpp
 
 all: $(NAME)
 
@@ -21,10 +29,10 @@ $(NAME): $(DIR_OBJS) $(OBJS)
 	c++ $(FLAGS) $(OBJS) -o $(NAME)
 	echo "$(GREEN)✅ $(NAME) compilated !"
 
-$(DIR_OBJS)/%.o: src/%.cpp Makefile
+$(DIR_OBJS)/%.o: src/%.cpp $(INC) Makefile
 	echo "$(GREEN)⏳ Making $(NAME)"
 	printf "$(BLEU) ⮡ Making $(RESET)$@$(RED)"
-	c++ $(FLAGS) -c $< -o $@
+	c++ $(FLAGS) -c $< -o $@ -I.
 	sleep 0.05
 	printf "$(ERASE)"
 
