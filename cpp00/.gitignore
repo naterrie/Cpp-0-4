@@ -1,0 +1,7 @@
+# Objects.
+.objs
+.o
+
+# executables
+megaphone
+phonebook
