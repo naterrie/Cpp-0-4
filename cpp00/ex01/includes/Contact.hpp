@@ -2,6 +2,7 @@
 # define CONTACT_HPP
 
 # include <iostream>
+#include <iomanip>
 # include "PhoneBook.hpp"
 
 class	Contact {
@@ -10,8 +11,17 @@ class	Contact {
 		Contact(void);
 		~Contact(void);
 
-		void		addContact(std::string str, int index);
-		std::string	getData(int index);
+	std::string	getFirstName();
+	std::string getLastName();
+	std::string getNickName();
+	std::string getPhoneNumber();
+	std::string getDarkestSecret();
+
+	void	setFirstName(std::string input);
+	void	setLastName(std::string input);
+	void	setNickName(std::string input);
+	void	setPhoneNumber(std::string input);
+	void	setDarkestSecret(std::string input);
 
 	private:
 	std::string	_firstName;

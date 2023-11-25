@@ -1,9 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/25 16:19:25 by naterrie          #+#    #+#              #
+#    Updated: 2023/11/25 16:19:25 by naterrie         ###   ########lyon.fr    #
+#                                                                              #
+# **************************************************************************** #
+
+############################## Colors #########################################
+
 BLEU := \033[36m
 PURPLE := \033[35m
 GREEN := \033[32m
 RED := \033[31m
 RESET := \033[0m
 ERASE := \033[2K\033[1A\r
+
+############################## Variables #######################################
 
 DIR_OBJS := .objs
 
@@ -16,12 +32,13 @@ INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
 HEADERS =	PhoneBook.hpp \
 			Contact.hpp
 
-FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR)
+FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR) -g3
 
 SRCS =	main.cpp \
 		PhoneBook.cpp \
-		Contact.cpp \
-		actions.cpp
+		Contact.cpp
+
+############################## Rules ##########################################
 
 all: $(NAME)
 
@@ -32,7 +49,7 @@ $(NAME): $(DIR_OBJS) $(OBJS)
 $(DIR_OBJS)/%.o: src/%.cpp $(INC) Makefile
 	echo "$(GREEN)⏳ Making $(NAME)"
 	printf "$(BLEU) ⮡ Making $(RESET)$@$(RED)"
-	c++ $(FLAGS) -c $< -o $@ -I.
+	c++ $(FLAGS) -MMD -c $< -o $@
 	sleep 0.05
 	printf "$(ERASE)"
 
