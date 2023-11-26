@@ -2,7 +2,7 @@
 # define CONTACT_HPP
 
 # include <iostream>
-#include <iomanip>
+# include <iomanip>
 # include "PhoneBook.hpp"
 
 class	Contact {
@@ -12,10 +12,10 @@ class	Contact {
 		~Contact(void);
 
 	std::string	getFirstName();
-	std::string getLastName();
-	std::string getNickName();
-	std::string getPhoneNumber();
-	std::string getDarkestSecret();
+	std::string	getLastName();
+	std::string	getNickName();
+	std::string	getPhoneNumber();
+	std::string	getDarkestSecret();
 
 	void	setFirstName(std::string input);
 	void	setLastName(std::string input);
