@@ -14,12 +14,12 @@
 
 static void megaphone(std::string str)
 {
-	int i = 0;
+	std::string::iterator it = str.begin();
 
-	while (str[i])
+	while (it != str.end())
 	{
-		str[i] = toupper(str[i]);
-		i++;
+		*it = std::toupper(*it);
+		it++;
 	}
 	std::cout << str;
 }
