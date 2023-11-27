@@ -6,7 +6,7 @@
 #    By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 16:19:25 by naterrie          #+#    #+#              #
-#    Updated: 2023/11/25 16:19:25 by naterrie         ###   ########lyon.fr    #
+#    Updated: 2023/11/27 16:09:08 by naterrie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,11 +25,20 @@ DIR_OBJS := .objs
 
 OBJS =	$(addprefix $(DIR_OBJS)/, $(SRCS:.cpp=.o))
 
-NAME = violence
+NAME =	violence
 
-FLAGS = -Wall -Werror -Wextra -std=c++98 -g3
+INC_DIR =	includes
+INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
+HEADERS =	Weapon.hpp \
+			HumanA.hpp \
+			HumanB.hpp \
 
-SRCS =	main.cpp
+FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR) -g3
+
+SRCS =	main.cpp \
+		HumanA.cpp \
+		HumanB.cpp \
+		Weapon.cpp
 
 ############################## Rules ##########################################
 
@@ -39,7 +48,7 @@ $(NAME): $(DIR_OBJS) $(OBJS)
 	c++ $(FLAGS) $(OBJS) -o $(NAME)
 	echo "$(GREEN)✅ $(NAME) compilated !"
 
-$(DIR_OBJS)/%.o: src/%.cpp Makefile
+$(DIR_OBJS)/%.o: src/%.cpp $(INC) Makefile
 	echo "$(GREEN)⏳ Making $(NAME)"
 	printf "$(BLEU) ⮡ Making $(RESET)$@$(RED)"
 	c++ $(FLAGS) -MMD -c $< -o $@
