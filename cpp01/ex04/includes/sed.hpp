@@ -15,5 +15,10 @@
 
 # include <iostream>
 # include <fstream>
+# include <string>
+
+int			infile_to_str(const char *sinfile, std::string &str);
+std::string	ft_replace(std::string str, std::string s1, std::string s2);
+int			ft_outfile(const char *soutfile, std::string str);
 
 #endif

@@ -25,7 +25,7 @@ DIR_OBJS := .objs
 
 OBJS =	$(addprefix $(DIR_OBJS)/, $(SRCS:.cpp=.o))
 
-NAME =	violence
+NAME =	sed
 
 INC_DIR =	includes
 INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
@@ -34,7 +34,7 @@ HEADERS =	sed.hpp
 FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR) -g3
 
 SRCS =	main.cpp \
-		replace.cpp
+		tools.cpp
 
 ############################## Rules ##########################################
 
