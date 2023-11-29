@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:02:17 by naterrie          #+#    #+#             */
-/*   Updated: 2023/11/29 16:33:51 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2023/11/29 17:13:05 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class Fixed {
 
 	public:
 		Fixed(void);
-		Fixed(Fixed const & src);
-		Fixed(int conste value);
+		Fixed(Fixed const &src);
+		Fixed(int const value);
 		Fixed(float const value);
 
 		~Fixed(void);
@@ -37,5 +37,7 @@ class Fixed {
 		int					_value;
 		static const int	_bits = 8;
 };
+
+std::ostream &operator<<(std::ostream &o, Fixed const &i);
 
 #endif
