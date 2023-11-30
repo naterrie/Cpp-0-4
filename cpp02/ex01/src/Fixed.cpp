@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:02:20 by naterrie          #+#    #+#             */
-/*   Updated: 2023/11/29 17:04:40 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2023/11/30 02:25:31 by aviscogl         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,10 @@ void	Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
+}
+
+std::ostream &operator<<(std::ostream &o, Fixed const &i)
+{
+	o << i.toFloat();
+	return (o);
 }
