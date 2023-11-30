@@ -9,6 +9,11 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "ClapTrap constructor called" << std::endl;
 }
 
+ClapTrap::ClapTrap(void)
+{
+	std::cout << "ClapTrap copy constructor called" << std::endl;
+}
+
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << "ClapTrap destructor called" << std::endl;
