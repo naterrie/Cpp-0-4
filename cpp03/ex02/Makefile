@@ -25,24 +25,20 @@ DIR_OBJS := .objs
 
 OBJS =	$(addprefix $(DIR_OBJS)/, $(SRCS:.cpp=.o))
 
-NAME =	Animals
+NAME =	FragTrap
 
 INC_DIR =	includes
 INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
-HEADERS =	Dog.hpp \
-			Cat.hpp \
-			Animal.hpp \
-			WrongAnimal.hpp \
-			WrongCat.hpp
+HEADERS =	ClapTrap.hpp \
+			ScavTrap.hpp \
+			FragTrap.hpp
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR) -g3
 
 SRCS =	main.cpp \
-		Dog.cpp \
-		Cat.cpp \
-		Animal.cpp \
-		WrongAnimal.cpp \
-		WrongCat.cpp
+		ClapTrap.cpp \
+		ScavTrap.cpp \
+		FragTrap.cpp
 
 ############################## Rules ##########################################
 

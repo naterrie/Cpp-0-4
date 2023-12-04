@@ -29,8 +29,3 @@ void	ScavTrap::guardGate(void)
 {
 	std::cout << "ScavTrap " << this->_name << " has enterred in Gate keeper mode" << std::endl;
 }
-
-int		ScavTrap::get_damage(void)
-{
-	return (this->_attackDamage);
-}
