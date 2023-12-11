@@ -10,37 +10,58 @@ PhoneBook::~PhoneBook(void)
 	std::cout << "PhoneBook destroyed" << std::endl;
 }
 
-void	PhoneBook::addContact()
+void PhoneBook::addContact()
 {
 	std::string input;
 
 	if (_index == 8)
 		_index = 0;
-	std::cout << "First name: ";
-	std::getline(std::cin, input);
-	if (std::cin.eof())
-		return ;
+
+	do {
+		std::cout << "First name: ";
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+			return;
+	} while (input.empty());
+
 	this->_contact[_index].setFirstName(input);
-	std::cout << "Last name: ";
-	std::getline(std::cin, input);
-	if (std::cin.eof())
-		return ;
+
+	do {
+		std::cout << "Last name: ";
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+			return;
+	} while (input.empty());
+
 	this->_contact[_index].setLastName(input);
-	std::cout << "Nickname: ";
-	std::getline(std::cin, input);
-	if (std::cin.eof())
-		return ;
+
+	do {
+		std::cout << "Nickname: ";
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+			return;
+	} while (input.empty());
+
 	this->_contact[_index].setNickName(input);
-	std::cout << "Phone number: ";
-	std::getline(std::cin, input);
-	if (std::cin.eof())
-		return ;
+
+	do {
+		std::cout << "Phone number: ";
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+			return;
+	} while (input.empty());
+
 	this->_contact[_index].setPhoneNumber(input);
-	std::cout << "Darkest secret: ";
-	std::getline(std::cin, input);
-	if (std::cin.eof())
-		return ;
+
+	do {
+		std::cout << "Darkest secret: ";
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+			return;
+	} while (input.empty());
+
 	this->_contact[_index].setDarkestSecret(input);
+
 	_index++;
 	if (_nbindex < 8)
 		_nbindex++;
@@ -74,9 +95,13 @@ void	PhoneBook::searchContact()
 	}
 	std::cout << "Enter index: ";
 	std::cin >> i;
-	if (std::cin.eof())
+	if (std::cin.fail())
+	{
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cout << "Invalid input. Please enter a valid index." << std::endl;
 		return ;
-	std::cin.ignore();
+	}
 	if (i < 0 || i > _nbindex - 1)
 		std::cout << "Wrong index" << std::endl;
 	else
