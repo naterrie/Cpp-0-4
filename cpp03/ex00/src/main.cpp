@@ -14,11 +14,10 @@ int main(void)
 	for (int i = 0; i < 9; i++)
 	{
 		bob.attack("marley");
-		if (bob.get_hitpoints() != 0)
-			marley.takeDamage(bob.get_damage());
+		marley.takeDamage(1);
 	}
 	bob.attack("marley");
-	if (bob.get_hitpoints() < 1)
-		marley.takeDamage(bob.get_damage());
+	marley.takeDamage(1);
+	marley.beRepaired(1);
 	return 0;
 }

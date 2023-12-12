@@ -7,8 +7,12 @@ int main(void)
 	ScavTrap malou("malou");
 
 	eddy.attack("malou");
-	malou.takeDamage(1);
-	malou.beRepaired(1);
+	malou.takeDamage(99);
+	malou.beRepaired(50);
+	malou.attack("malou");
 	malou.guardGate();
+	malou.takeDamage(51);
+	malou.attack("eddy");
+	eddy.takeDamage(0);
 	return (0);
 }

@@ -16,52 +16,41 @@ void PhoneBook::addContact()
 
 	if (_index == 8)
 		_index = 0;
-
 	do {
 		std::cout << "First name: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			return;
 	} while (input.empty());
-
 	this->_contact[_index].setFirstName(input);
-
 	do {
 		std::cout << "Last name: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			return;
 	} while (input.empty());
-
 	this->_contact[_index].setLastName(input);
-
 	do {
 		std::cout << "Nickname: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			return;
 	} while (input.empty());
-
 	this->_contact[_index].setNickName(input);
-
 	do {
 		std::cout << "Phone number: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			return;
 	} while (input.empty());
-
 	this->_contact[_index].setPhoneNumber(input);
-
 	do {
 		std::cout << "Darkest secret: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			return;
 	} while (input.empty());
-
 	this->_contact[_index].setDarkestSecret(input);
-
 	_index++;
 	if (_nbindex < 8)
 		_nbindex++;
@@ -100,9 +89,8 @@ void	PhoneBook::searchContact()
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << "Invalid input. Please enter a valid index." << std::endl;
-		return ;
 	}
-	if (i < 0 || i > _nbindex - 1)
+	else if (i < 0 || i > _nbindex - 1)
 		std::cout << "Wrong index" << std::endl;
 	else
 	{
