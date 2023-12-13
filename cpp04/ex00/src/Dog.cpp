@@ -13,5 +13,5 @@ Dog::~Dog(void)
 
 void Dog::makeSound()
 {
-	std::cout << "WOUAF WOUAF" << std::endl;
+	std::cout << "Real dog say WOUF not Wouaf" << std::endl;
 }

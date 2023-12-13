@@ -6,14 +6,14 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 13:18:28 by naterrie          #+#    #+#             */
-/*   Updated: 2023/11/29 15:46:11 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2023/12/13 14:39:41 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_H
 # define FIXED_H
 
-# include <iostream>
+#include <iostream>
 
 class Fixed {
 
