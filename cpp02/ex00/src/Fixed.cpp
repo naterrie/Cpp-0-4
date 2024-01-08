@@ -6,7 +6,7 @@
 /*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 13:18:31 by naterrie          #+#    #+#             */
-/*   Updated: 2023/11/29 15:45:56 by naterrie         ###   ########lyon.fr   */
+/*   Updated: 2024/01/08 14:58:09 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed &Fixed::operator=(Fixed const & ctr)
+Fixed &Fixed::operator=(Fixed const &ctr)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Copy assignation operator called" << std::endl;
 	this->_value = ctr.getRawBits();
 	return (*this);
 }

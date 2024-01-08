@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aviscogl <aviscogl@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:02:20 by naterrie          #+#    #+#             */
-/*   Updated: 2023/11/30 02:25:31 by aviscogl         ###   ########lyon.fr   */
+/*   Updated: 2024/01/08 15:00:35 by naterrie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Fixed::~Fixed(void)
 
 Fixed &Fixed::operator=(Fixed const & ctr)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Copy assignation operator called" << std::endl;
 	this->_value = ctr.getRawBits();
 	return (*this);
 }
@@ -59,13 +59,11 @@ int		Fixed::toInt(void) const
 
 int		Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_value);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
 }
 
