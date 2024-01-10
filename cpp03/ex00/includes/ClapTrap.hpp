@@ -14,18 +14,18 @@ class ClapTrap {
 		~ClapTrap(void);
 
 		void	attack(const std::string &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		void	takeDamage(int amount);
+		void	beRepaired(int amount);
 
-		int		get_damage(void);
-		int		get_energy(void);
-		int		get_hitpoints(void);
+		int		get_damage(void) const;
+		int		get_energy(void) const;
+		int		get_hitpoints(void) const;
 
 	private:
 		std::string	_name;
-		int		_hitpoints;
-		int		_energyPoints;
-		int		_attackDamage;
+		int			_hitpoints;
+		int			_energyPoints;
+		int			_attackDamage;
 };
 
 #endif

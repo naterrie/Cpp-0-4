@@ -6,13 +6,15 @@ int main(void)
 	ClapTrap eddy("eddy");
 	ScavTrap malou("malou");
 
+	std::cout << std::endl;
 	eddy.attack("malou");
-	malou.takeDamage(99);
-	malou.beRepaired(50);
-	malou.attack("malou");
+	malou.takeDamage(eddy.get_damage());
+	malou.beRepaired(10);
 	malou.guardGate();
-	malou.takeDamage(51);
 	malou.attack("eddy");
-	eddy.takeDamage(0);
+	eddy.takeDamage(malou.get_damage());
+	eddy.beRepaired(1);
+	malou.takeDamage(19);
+	std::cout << std::endl;
 	return (0);
 }

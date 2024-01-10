@@ -52,22 +52,12 @@ void	ScavTrap::attack(const std::string &target)
 	}
 }
 
-void	ScavTrap::guardGate(void)
+void	ScavTrap::guardGate(void) const
 {
-	std::cout << "ScavTrap " << this->_name << " has enterred in Gate keeper mode" << std::endl;
-}
-
-int		ScavTrap::get_damage(void)
-{
-	return (this->_attackDamage);
-}
-
-int		ScavTrap::get_energy(void)
-{
-	return (this->_energyPoints);
-}
-
-int		ScavTrap::get_hitpoints(void)
-{
-	return (this->_hitpoints);
+	if (this->_hitpoints <= 0)
+		std::cout << "ScavTrap " << this->_name << " is already dead !" << std::endl;
+	else if (this->_energyPoints <= 0)
+		std::cout << "ScavTrap " << this->_name << " can't attack, not energy anymore !" << std::endl;
+	else
+		std::cout << "ScavTrap " << this->_name << " has enterred in Gate keeper mode" << std::endl;
 }

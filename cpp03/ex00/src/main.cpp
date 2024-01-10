@@ -13,7 +13,8 @@ int main(void)
 	bob.takeDamage(marley.get_damage());
 	bob.beRepaired(5);
 	bob.attack("marley");
-	marley.takeDamage(10);
+	marley.takeDamage(-10);
+	std::cout << marley.get_hitpoints() << std::endl;
 	std::cout << std::endl;
 	for (int i = 0; i < 9; i++)
 		bob.attack("marley");
