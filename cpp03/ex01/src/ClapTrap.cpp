@@ -22,7 +22,6 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 
 	if (this == &rhs)
 		return (*this);
-
 	this->_name = rhs._name;
 	this->_hitpoints = rhs._hitpoints;
 	this->_energyPoints = rhs._energyPoints;

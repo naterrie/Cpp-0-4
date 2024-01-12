@@ -27,6 +27,9 @@ FragTrap::FragTrap(const FragTrap &src)
 FragTrap &FragTrap::operator=(const FragTrap &rhs)
 {
 	std::cout << "FragTrap assignation operator called" << std::endl;
+
+	if (this == &rhs)
+		return (*this);
 	this->_name = rhs._name;
 	this->_hitpoints = rhs._hitpoints;
 	this->_energyPoints = rhs._energyPoints;

@@ -27,6 +27,9 @@ ScavTrap::ScavTrap(const ScavTrap &src)
 ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
 {
 	std::cout << "ScavTrap assignation operator called" << std::endl;
+
+	if (this == &rhs)
+		return (*this);
 	this->_name = rhs._name;
 	this->_hitpoints = rhs._hitpoints;
 	this->_energyPoints = rhs._energyPoints;
