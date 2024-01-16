@@ -25,24 +25,26 @@ DIR_OBJS := .objs
 
 OBJS =	$(addprefix $(DIR_OBJS)/, $(SRCS:.cpp=.o))
 
-NAME =	Animals
+NAME =	AAnimals
 
 INC_DIR =	includes
 INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
 HEADERS =	Dog.hpp \
 			Cat.hpp \
-			Animal.hpp \
+			AAnimal.hpp \
 			WrongAnimal.hpp \
-			WrongCat.hpp
+			WrongCat.hpp \
+			Brain.hpp
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR)
 
 SRCS =	main.cpp \
 		Dog.cpp \
 		Cat.cpp \
-		Animal.cpp \
+		AAnimal.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
+		Brain.cpp
 
 ############################## Rules ##########################################
 

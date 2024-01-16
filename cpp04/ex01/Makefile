@@ -33,7 +33,8 @@ HEADERS =	Dog.hpp \
 			Cat.hpp \
 			Animal.hpp \
 			WrongAnimal.hpp \
-			WrongCat.hpp
+			WrongCat.hpp \
+			Brain.hpp
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR)
 
@@ -42,7 +43,8 @@ SRCS =	main.cpp \
 		Cat.cpp \
 		Animal.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
+		Brain.cpp
 
 ############################## Rules ##########################################
 

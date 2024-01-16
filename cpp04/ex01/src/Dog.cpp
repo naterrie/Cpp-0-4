@@ -2,6 +2,7 @@
 
 Dog::Dog(void): Animal()
 {
+	this->_brain = new Brain();
 	std::cout << "Dog constructor called" << std::endl;
 	this->_type = "Dog";
 }
@@ -24,6 +25,7 @@ Dog& Dog::operator=(const Dog& src)
 
 Dog::~Dog(void)
 {
+	delete this->_brain;
 	std::cout << "Dog destructor called" << std::endl;
 }
 
