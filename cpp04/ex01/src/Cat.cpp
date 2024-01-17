@@ -23,6 +23,11 @@ Cat& Cat::operator=(const Cat& src)
 	return *this;
 }
 
+Brain* Cat::getBrain(void) const
+{
+	return this->_brain;
+}
+
 Cat::~Cat(void)
 {
 	delete this->_brain;

@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <string>
+# include "Brain.hpp"
 
 class AAnimal {
 	public:
@@ -13,6 +14,7 @@ class AAnimal {
 		AAnimal& operator=(const AAnimal& src);
 
 		virtual void makeSound() const = 0;
+		virtual Brain *getBrain(void) const = 0;
 		std::string getType(void) const;
 
 	protected:

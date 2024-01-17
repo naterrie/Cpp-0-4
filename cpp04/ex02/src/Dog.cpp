@@ -23,6 +23,11 @@ Dog& Dog::operator=(const Dog& src)
 	return *this;
 }
 
+Brain* Dog::getBrain(void) const
+{
+	return this->_brain;
+}
+
 Dog::~Dog(void)
 {
 	delete this->_brain;

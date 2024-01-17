@@ -12,6 +12,7 @@ class Cat : public AAnimal {
 
 		Cat& operator=(const Cat& src);
 
+		Brain *getBrain(void) const;
 		void makeSound() const;
 	private:
 		Brain *_brain;

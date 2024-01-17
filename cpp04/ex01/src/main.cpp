@@ -15,6 +15,10 @@ int main(void)
 	j->makeSound();
 	meta->makeSound();
 	wrong->makeSound();
+	j->getBrain()->setIdea(0, "Dog idea");
+	i->getBrain()->setIdea(0, "Cat idea");
+	std::cout << "Dog idea: " << j->getBrain()->getIdea(0) << std::endl;
+	std::cout << "Cat idea: " << i->getBrain()->getIdea(0) << std::endl;
 	delete i;
 	delete j;
 	delete meta;

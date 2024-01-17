@@ -12,6 +12,7 @@ class Dog : public AAnimal {
 
 		Dog& operator=(const Dog& src);
 
+		Brain *getBrain(void) const;
 		void makeSound() const;
 	private:
 		Brain *_brain;

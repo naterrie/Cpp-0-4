@@ -19,6 +19,11 @@ Animal& Animal::operator=(const Animal& src)
 	return *this;
 }
 
+Brain* Animal::getBrain(void) const
+{
+	return NULL;
+}
+
 std::string Animal::getType(void) const
 {
 	return this->_type;

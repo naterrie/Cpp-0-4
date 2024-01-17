@@ -13,10 +13,13 @@ int main(void)
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	wrong->makeSound();
+	j->getBrain()->setIdea(0, "Dog idea");
+	i->getBrain()->setIdea(0, "Cat idea");
+	std::cout << "Dog idea: " << j->getBrain()->getIdea(0) << std::endl;
+	std::cout << "Cat idea: " << i->getBrain()->getIdea(0) << std::endl;
 	delete i;
 	delete j;
 	delete wrong;
-	const AAnimal* animal = new AAnimal(); // Unmute to broke it
-	delete animal; // Unmute to broke it
+	//const AAnimal* animal = new AAnimal(); // Unmute to broke it
 	return 0;
 }

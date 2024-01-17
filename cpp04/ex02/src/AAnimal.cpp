@@ -19,6 +19,7 @@ AAnimal& AAnimal::operator=(const AAnimal& src)
 	return *this;
 }
 
+
 std::string AAnimal::getType(void) const
 {
 	return this->_type;
