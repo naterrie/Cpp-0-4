@@ -6,7 +6,7 @@
 #    By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 16:19:25 by naterrie          #+#    #+#              #
-#    Updated: 2024/01/17 13:28:45 by naterrie         ###   ########lyon.fr    #
+#    Updated: 2024/01/17 15:23:42 by naterrie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ INC_DIR =	includes
 INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
 HEADERS =	AMateria.hpp \
 			ICharacter.hpp \
-			IMateriaSource.hpp 
+			IMateriaSource.hpp \
+			Ice.hpp \
+			Cure.hpp
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR)
 
@@ -39,6 +41,8 @@ SRCS =	main.cpp \
 		AMateria.cpp \
 		ICharacter.cpp \
 		IMateriaSource.cpp \
+		Ice.cpp \
+		Cure.cpp
 
 
 ############################## Rules ##########################################
