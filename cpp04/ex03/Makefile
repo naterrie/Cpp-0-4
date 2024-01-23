@@ -6,7 +6,7 @@
 #    By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 16:19:25 by naterrie          #+#    #+#              #
-#    Updated: 2024/01/17 15:23:42 by naterrie         ###   ########lyon.fr    #
+#    Updated: 2024/01/23 14:56:31 by naterrie         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,24 +25,18 @@ DIR_OBJS := .objs
 
 OBJS =	$(addprefix $(DIR_OBJS)/, $(SRCS:.cpp=.o))
 
-NAME =	AAnimals
+NAME =	AMateria
 
 INC_DIR =	includes
-INC		=	$(addprefix $(INC_DIR)/, $(HEADERS))
-HEADERS =	AMateria.hpp \
-			ICharacter.hpp \
-			IMateriaSource.hpp \
-			Ice.hpp \
-			Cure.hpp
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR)
 
-SRCS =	main.cpp \
-		AMateria.cpp \
-		ICharacter.cpp \
-		IMateriaSource.cpp \
+SRCS =	AMateria.cpp \
+		Character.cpp \
+		Cure.cpp \
+		main.cpp \
 		Ice.cpp \
-		Cure.cpp
+		MateriaSource.cpp
 
 
 ############################## Rules ##########################################
@@ -53,7 +47,7 @@ $(NAME): $(DIR_OBJS) $(OBJS)
 	c++ $(FLAGS) $(OBJS) -o $(NAME)
 	echo "$(GREEN)✅ $(NAME) compilated !"
 
-$(DIR_OBJS)/%.o: src/%.cpp $(INC) Makefile
+$(DIR_OBJS)/%.o: src/%.cpp Makefile
 	echo "$(GREEN)⏳ Making $(NAME)"
 	printf "$(BLEU) ⮡ Making $(RESET)$@$(RED)"
 	c++ $(FLAGS) -MMD -c $< -o $@
