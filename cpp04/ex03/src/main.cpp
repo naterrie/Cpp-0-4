@@ -97,8 +97,6 @@ int main()
 			deepCopyTest.use(i, deepCopyTest);
 		}
 		delete src;
-		std::cout << "cc bieng ?" << std::endl;
 	}
-		std::cout << "cc bieng ?" << std::endl;
 	return 0;
 }

@@ -10,6 +10,8 @@ class Character : public ICharacter
 	private:
 		std::string	_name;
 		AMateria	*_inventory[4];
+		AMateria	**_trash;
+		int			_trash_count;
 		int			_count;
 
 	public:
@@ -22,6 +24,7 @@ class Character : public ICharacter
 
 		std::string const	&getName() const;
 
+		void				trash(AMateria *m);
 		void				equip(AMateria *m);
 		void				unequip(int idx);
 		void				use(int idx, ICharacter &target);

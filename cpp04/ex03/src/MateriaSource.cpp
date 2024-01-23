@@ -9,7 +9,7 @@ MateriaSource::MateriaSource()
 MateriaSource::MateriaSource(const MateriaSource &copy)
 {
 	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = copy._inventory[i];
+		this->_inventory[i] = copy._inventory[i]->clone();
 }
 
 MateriaSource::~MateriaSource()
