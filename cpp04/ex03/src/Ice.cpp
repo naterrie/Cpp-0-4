@@ -15,7 +15,8 @@ Ice::~Ice()
 
 Ice	&Ice::operator=(const Ice &copy)
 {
-	this->_type = copy._type;
+	if (this != &copy)
+		this->_type = copy._type;
 	return (*this);
 }
 

@@ -12,7 +12,6 @@ class Character : public ICharacter
 		AMateria	*_inventory[4];
 		AMateria	**_trash;
 		int			_trash_count;
-		int			_count;
 
 	public:
 		Character();

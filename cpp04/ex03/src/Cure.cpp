@@ -15,7 +15,8 @@ Cure::~Cure()
 
 Cure	&Cure::operator=(const Cure &copy)
 {
-	this->_type = copy._type;
+	if (this != &copy)
+		this->_type = copy._type;
 	return (*this);
 }
 

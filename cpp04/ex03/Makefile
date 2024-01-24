@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: naterrie <naterrie@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: celeste <celeste@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 16:19:25 by naterrie          #+#    #+#              #
-#    Updated: 2024/01/23 14:56:31 by naterrie         ###   ########lyon.fr    #
+#    Updated: 2024/01/24 11:42:03 by celeste          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ NAME =	AMateria
 
 INC_DIR =	includes
 
-FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR)
+FLAGS = -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR) #-g3 -fsanitize=address
 
 SRCS =	AMateria.cpp \
 		Character.cpp \
